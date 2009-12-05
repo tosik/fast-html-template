@@ -1,6 +1,6 @@
 #! /usr/local/bin/ruby
 
-require "./fast-html-template.rb"
+require "../fast-html-template.rb"
 tmpl = HTML::Template.new("./ifnest.html")
 tmpl.param({'one' => { 'hoge' => 'ほげほげ', 'two' => {'hoge' => 'complete'}}}) 
 print "Content-Type: text/html\n\n"

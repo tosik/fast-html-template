@@ -76,9 +76,11 @@ class Template
 	
 	# ファイルのロード
 	def load( file )
+    loaded = false
 		@path.each { |path|
 			if (FileTest.exist?( filepath = File.join(path,file)))
 				begin
+          loaded = true
 					fp = File.open( filepath, "r")
 					@material = fp.read
 					fp.close
@@ -87,7 +89,7 @@ class Template
 				end
 			end
 		}
-		if @material
+		if loaded
 			return
 		end
 		raise ( IO Error,"Template file not found" )

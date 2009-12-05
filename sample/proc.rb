@@ -1,6 +1,6 @@
 #! /usr/local/bin/ruby
 
-require "./fast-html-template.rb"
+require "../fast-html-template.rb"
 
 tmpl = HTML::Template.new("./proc.html")
 

@@ -1,7 +1,7 @@
 #! /usr/local/bin/ruby
 
 require "cgi"
-require "./fast-html-template.rb"
+require "../fast-html-template.rb"
 
 tmpl = HTML::Template.new("./preprocess.html")
 tmpl.def_prep(Proc.new{|arg|CGI::escapeHTML(arg)})
